@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'opensans';
+  src: url('../fonts/opensans-light.woff2') format('woff2'), url('../fonts/opensans-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensans';
+  src: url('../fonts/opensans-regular.woff2') format('woff2'), url('../fonts/opensans-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensans';
+  src: url('../fonts/opensans-semibold.woff2') format('woff2'), url('../fonts/opensans-semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'montserrat', Arial, sans-serif;
+  position: relative;
+  background-color: #424242;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+body {
+  background-color: #424242;
+  font-family: Open sans, sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 640px;
+  width: 2678px;
+}
+
+.checkbox_container {
+  width: 177px;
+  height: 309px;
+  margin-top: 70px;
+  margin-left: 95px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.checkbox__header {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: left;
+}
+
+.checkbox_label {
+  display: block;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333333;
+}
+
+label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.check {
+  display: none;
+}
+
+.check+span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  border: 1px solid #CCB26E;
+  border-radius: 3px;
+}
+
+.check:checked+span {
+  border: 1px solid #CCB26E;
+}
+
+.check+span:before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: 3px;
+  width: 8px;
+  height: 4px;
+  box-sizing: border-box;
+  border: 1px solid #CCB26E;
+  border-top: none;
+  border-right: none;
+  opacity: 0;
+  transform: rotate(-45deg);
+  transition: opacity .3s ease-in-out;
+}
+
+.check:checked+span:before {
+  opacity: 1;
+}
+
+.container_selector {
+  width: 200px;
+  margin-top: 70px;
+  margin-left: 58px;
+}
+
+.selector_text {
+  color: #333333;
+}
+
+.choices__inner {
+  min-height: 37px;
+  padding: 5px 12px 7px 11px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.is-open .choices__inner {
+  position: relative;
+  border-color: #CCB26E;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding-bottom: 9px;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 10px;
+}
+
+.choices__list {
+  padding-top: 10px;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+.choices__list--single {
+  display: inline-block;
+  padding: 8px 16px 11px 15px;
+  width: 100%;
+}
+
+.is-open .choices__list--dropdown {
+  border-top: 0px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-color: #CCB26E;
+}
+
+.choices[data-type*=select-one]:after {
+  height: 6px;
+  width: 6px;
+  border-color: transparent transparent #666666 #666666;
+  border-width: 1px;
+  margin-top: -8.5px;
+  transform: rotate(-45deg);
+  z-index: 1;
+  transition: border-color 0.2s ease-in-out, margin-top 0.2s ease-in-out;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  margin-top: -3.5px;
+  border-color: #CCB26E #CCB26E transparent transparent;
+}
+
+.common-border {
+  border: 1px solid #CCB26E;
+}
+
+#choices--selectCustom-item-choice-1 {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item {
+  padding: 15px;
+}
+
+.choices__list--dropdown {
+  margin-top: -7px;
+  z-index: 0;
+}
+
+.map__container {
+  margin-top: 19px;
+  width: 480px;
+  margin-left: 50px;
+}
+
+.address {
+  width: 482px;
+  margin-bottom: 19px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.customScroll__container {
+  margin-top: 70px;
+  margin-left: 60px;
+  height: 504;
+}
+
+.simplebar-content-wrapper {
+  overflow: auto;
+  padding: 30px 20px 5px 30px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.customScroll {
+  width: 340px;
+  height: 310px;
+  background-color: #fff;
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-color: #CCB26E;
+  min-height: 70px;
+}
+
+.form__container {
+  width: 450px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.form {
+  width: 440px;
+  min-height: 410px;
+  padding-top: 7px;
+  padding-left: 30px;
+  background-color: #000000;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  padding-left: 20px;
+  color: #FF5C00 !important;
+  transform: translateY(-80px);
+}
+
+.input {
+  display: block;
+  width: 380px;
+  height: 60px;
+  margin-top: 38px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 24px;
+  border: 1px solid #FF5C00;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.button {
+  margin-top: 31px;
+  margin-bottom: 39px;
+  width: 192px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #FF5C00;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.tooltip {
+  max-width: 375px;
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 70px;
+  margin-left: 55px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.marker {
+  position: relative;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #bcbcbc;
+  color: white;
+}
+
+.marker:hover,
+.marker:focus {
+  background: #cbb468;
+}
+
+.tippy-box {
+  background-color: #666666;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.tippy-arrow::before {
+  color: #666666;
+}

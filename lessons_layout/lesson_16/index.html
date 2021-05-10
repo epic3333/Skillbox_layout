@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/opensans-light.woff2" as="font" type="font/woff2" crossorigin>
+    <title>База знаний</title>
+    <script src="js/just-validate.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <!-- or -->
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="checkbox">
+            <div class="checkbox_container">
+                <h2 class="checkbox__header">
+                    Категории:
+                </h2>
+                <label for="check" class="checkbox_label">
+      <input type="checkbox" name="check" id="check" class="check">
+      Динозавры
+      <span></span>
+    </label>
+                <label class="checkbox_label">
+      <input type="checkbox" name="check" class="check">
+      Медведи
+      <span></span>
+    </label>
+                <label class="checkbox_label">
+      <input type="checkbox" name="check" class="check">
+      Косули
+      <span></span>
+    </label>
+                <label class="checkbox_label">
+      <input type="checkbox" name="check" class="check">
+      Лисы
+      <span></span>
+    </label>
+                <label class="checkbox_label">
+      <input type="checkbox" name="check" class="check">
+      Волки
+      <span></span>
+    </label>
+                <label class="checkbox_label">
+      <input type="checkbox" name="check" class="check">
+      Олени и лоси
+      <span></span>
+    </label>
+            </div>
+        </section>
+
+        <section>
+            <div class="container_selector">
+                <select name="select" id="selectCustom">
+        <option value="">Материалы</option>
+        <option value="Древесина">Древесина</option>
+        <option value="Металл">Металл</option>
+        <option value="Камень">Камень</option>
+        <option value="Пластик">Пластик</option>
+        <option value="Композитный">Композитный</option>
+        <option value="Гипс">Гипс</option>
+      </select>
+            </div>
+        </section>
+
+        <section>
+            <div class="map__container">
+                <p class="address">В качестве адреса для маркера используйте: Франция, Иль-де-Франс, Париж, X округ Парижа, улица дю Фобур Сен Дени 54</p>
+                <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+                <div id="map" style="width: 480px; height: 480px"></div>
+                <script type="text/javascript"></script>
+            </div>
+        </section>
+
+        <section>
+            <div class="customScroll__container">
+                <div class="customScroll" data-simplebar>
+                    Сложно сказать, почему многие известные личности представлены в&nbsp;исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы&nbsp;вынуждены отталкиваться от&nbsp;того,
+                    что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического
+                    прогресса освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а&nbsp;также свежий взгляд
+                    на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты для первоочередных требований.
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="form__container">
+                <form action="" class="form">
+                    <input class="input" name="Имя" type="text" placeholder="Имя*" data-validate-field="name">
+                    <input class="input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
+                    <input class="input" name="email" type="email" placeholder="Email*" data-validate-field="mail">
+
+                    <button class="button">Заказать</button>
+                </form>
+
+            </div>
+        </section>
+
+        <section>
+
+            <div class="tooltip">
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                <button class="marker" id="myButton" tabindex="0">i</button>
+            </div>
+
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <script src="js/choices.min.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
